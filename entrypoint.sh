@@ -25,11 +25,15 @@ echo "$(cat ./workshop.vdf)"
     +workshop_build_item `pwd -P`/workshop.vdf \
     +quit \
 ) || (
+    # https://partner.steamgames.com/doc/features/workshop/implementation#SteamCmd
     echo /home/steam/Steam/logs/stderr.txt
     echo "$(cat /home/steam/Steam/logs/stderr.txt)"
     echo
     echo /home/steam/Steam/logs/Workshop_log.txt
     echo "$(cat /home/steam/Steam/logs/Workshop_log.txt)"
+    echo
+    echo /home/steam/Steam/workshopbuilds/depot_build_$1.log
+    echo "$(cat /home/steam/Steam/workshopbuilds/depot_build_$1.log)"
 
     exit 1
 )
