@@ -2,7 +2,7 @@
 
 set -eu
 
-$repo=`pwd`
+repo=`pwd`
 cd $STEAMCMDDIR
 
 echo "Uploading item $2 for app $1 from $3"
