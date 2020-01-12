@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Set VERSION env
-        run: echo ::set-env name=VERSION::$(echo ${GITHUB_REF:11})
+      run: echo ::set-env name=VERSION::$(echo ${GITHUB_REF:11})
     - name: Build addon with HEMTT
       uses: 16AAModTeam/hemtt@stable
       with:
