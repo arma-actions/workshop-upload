@@ -18,6 +18,8 @@ cat << EOF > ./workshop.vdf
 }
 EOF
 
+echo "$(cat ./workshop.vdf)"
+
 /home/steam/steamcmd/steamcmd.sh \
     +login $STEAM_USERNAME $STEAM_PASSWORD \
     +workshop_build_item `pwd -P`/workshop.vdf \
