@@ -3,6 +3,7 @@
 set -eu
 
 repo=`pwd`
+HOME=/home/steam
 cd $STEAMCMDDIR
 
 echo "Uploading item $2 for app $1 from $3"
