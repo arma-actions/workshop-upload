@@ -20,10 +20,18 @@ EOF
 
 echo "$(cat ./workshop.vdf)"
 
-/home/steam/steamcmd/steamcmd.sh \
+(/home/steam/steamcmd/steamcmd.sh \
     +login $STEAM_USERNAME $STEAM_PASSWORD \
     +workshop_build_item `pwd -P`/workshop.vdf \
     +quit \
-;
+) || (
+    echo /home/steam/Steam/logs/stderr.txt
+    echo "$(cat /home/steam/Steam/logs/stderr.txt)"
+    echo
+    echo /home/steam/Steam/logs/Workshop_log.txt
+    echo "$(cat /home/steam/Steam/logs/Workshop_log.txt)"
+
+    exit 1
+)
 
 exit 0
