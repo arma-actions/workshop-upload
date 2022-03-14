@@ -29,8 +29,8 @@ echo "$(cat ./workshop.vdf)"
     echo /home/steam/Steam/logs/stderr.txt
     echo "$(cat /home/steam/Steam/logs/stderr.txt)"
     echo
-    echo /home/steam/Steam/logs/Workshop_log.txt
-    echo "$(cat /home/steam/Steam/logs/Workshop_log.txt)"
+    echo /home/steam/Steam/logs/workshop_log.txt
+    echo "$(cat /home/steam/Steam/logs/workshop_log.txt)"
     echo
     echo /home/steam/Steam/workshopbuilds/depot_build_$1.log
     echo "$(cat /home/steam/Steam/workshopbuilds/depot_build_$1.log)"
