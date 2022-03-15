@@ -2,6 +2,8 @@
 
 set -eu
 
+echo "Action ref: $GITHUB_ACTION_REF"
+
 repo=`pwd`
 export HOME=/home/steam
 cd $STEAMCMDDIR
